@@ -1,0 +1,72 @@
+/* style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f4f7f9; padding: 20px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.main-header { text-align: center; margin-bottom: 30px; }
+
+/* SECCIÓN POR AÑO */
+.seccion-anio {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-left: 8px solid #2563eb;
+}
+
+.titulo-anio { color: #1e293b; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+.titulo-cuatrimestre { font-size: 0.9rem; color: #64748b; text-transform: uppercase; margin: 25px 0 10px 0; font-weight: 800; }
+
+/* GRID Y TARJETAS */
+.materias-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+
+.materia-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* ESTADOS */
+.aprobada { background-color: #eff6ff; border-color: #3b82f6; }
+.habilitada { background-color: #f0fdf4; border-color: #22c55e; border-width: 2px; }
+
+/* Cuando está bloqueada, cambiamos el cursor para indicar que no se puede clickear */
+.bloqueada { 
+    opacity: 0.5; 
+    background-color: #f8fafc; 
+    border-style: dashed; 
+    cursor: not-allowed; 
+}
+
+.materia-nombre { font-weight: bold; display: block; }
+.materia-meta { font-size: 0.75rem; color: #94a3b8; }
+
+/* style.css (añadir al final) */
+
+.actions {
+    margin-top: 20px;
+}
+
+.btn-export {
+    background-color: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-export:hover {
+    background-color: #334155;
+}
+
+/* Estilo para que el PDF se vea bien impreso */
+@media print {
+    .btn-export { display: none; }
+}
